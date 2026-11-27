@@ -107,12 +107,7 @@ nav.main a:hover{color:var(--saffron)}
 
 /* signup */
 .signup .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
-.signup form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}
-.signup input{font:500 16px var(--sans);padding:18px 24px;border-radius:999px;border:0;background:var(--card);color:var(--ink);min-width:0}
-.signup .note{grid-column:1/-1;font-size:13px;margin:4px 0 0;opacity:.8}
-.signup .done{grid-column:1/-1;font-weight:700;margin:0}
 @media (max-width:820px){.signup .wrap{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:460px){.signup form{grid-template-columns:minmax(0,1fr)}}
 
 /* about */
 .principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:56px}
@@ -256,7 +251,6 @@ html{scroll-padding-top:84px;scroll-behavior:smooth}
 .on-dusk .team .role{color:var(--saffron)}
 .on-dusk .team p{color:var(--mist);opacity:.88}
 .team.grid3 .head{aspect-ratio:4/5}
-.signup .note a{color:inherit;font-weight:700}
 footer .email{color:var(--mist);text-decoration:none;font-size:17px}
 footer .email:hover{color:var(--saffron)}
 .policy{min-height:52vh}
@@ -265,7 +259,7 @@ body:not(.home) header.site{background:var(--aubergine)}
 @media (max-width:760px){.menu-btn,nav.main{display:none!important}}
 /* Type matched to Figma D07 */
 body{font-weight:400}
-nav.main a,.shot figcaption,footer .links a,footer .email,.signup input,.contact input{font-weight:500}
+nav.main a,.shot figcaption,footer .links a,footer .email,.contact input{font-weight:500}
 footer .email{font-size:18px}
 footer .links a{font-size:16px}
 .on-dusk .eyebrow,.on-dusk .team .role{color:var(--aubergine)}
@@ -275,7 +269,6 @@ h2{font-size:clamp(36px,4.2vw,56px)}
 .signup h2{font-size:clamp(34px,3.8vw,52px)}
 #products .lede{font-size:18px}
 .signup .lede{font-size:18px}
-.signup .note{opacity:1;font-weight:400}
 </style>
 </head><body>
 
@@ -325,7 +318,6 @@ h2{font-size:clamp(36px,4.2vw,56px)}
       links.forEach(function(a){ if(a.getAttribute('href').split('#')[1]===e.target.id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); }); },{rootMargin:'-45% 0px -50% 0px'});
     ids.forEach(function(id){ var el=document.getElementById(id); if(el) io.observe(el); });
   }
-  document.querySelectorAll('form.notify').forEach(function(f){ f.addEventListener('submit',function(e){ e.preventDefault(); var s=f.querySelector('.note'); s.textContent='Thanks. This is a website sample, so no email has been stored or sent.'; s.style.fontWeight='700'; }); });
 })();
 </script>
 </body></html>
